@@ -1,11 +1,10 @@
 import React from "react";
-import cat from "../../cat.PNG";
 
-const Card = () => {
+const Card = ({ image }) => {
   return (
-    <div>
-      <figure>
-        <img src={cat} />
+    <div className="h-96">
+      <figure className="h-full w-full">
+        <img src={image} className="object-cover h-full w-full" />
       </figure>
     </div>
   );
