@@ -3,7 +3,7 @@ import React from "react";
 const Button = () => {
   return (
     <button
-      type="button"
+      type="submit"
       className="p-2.5 flex justify-center items-center bg-blue-600 rounded-lg"
     >
       <svg

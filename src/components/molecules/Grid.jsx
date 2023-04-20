@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../atoms/Card";
-import impostor from "../../impostor.jpg";
-import cat from "../../cat.PNG";
+import { ImagesContext } from "../../App";
 
 const Grid = () => {
+  const images = useContext(ImagesContext);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <Card image={cat} />
-      <Card image={impostor} />
-      <Card image={cat} />
-      <Card image={cat} />
-      <Card image={impostor} />
-      <Card image={impostor} />
+      {images &&
+        images.map((img) => (
+          <Card
+            key={img.id}
+            src={img.urls.regular}
+            alt={img.alt_description}
+            id={img.id}
+          />
+        ))}
     </div>
   );
 };
