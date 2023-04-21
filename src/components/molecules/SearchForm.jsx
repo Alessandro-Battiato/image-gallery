@@ -24,7 +24,7 @@ const SearchForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="home__search-form flex items-center justify-between gap-2"
+      className="flex items-center justify-between gap-2"
     >
       <SearchInput
         onClick={handleClear}
