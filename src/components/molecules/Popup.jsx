@@ -40,24 +40,24 @@ const Popup = ({ data, close }) => {
   };
 
   return (
-    <div className="popup mt-8 relative flex flex-col justify-around bg-white rounded-lg items-center max-w-2xl w-full h-[34rem]">
+    <div className="popup mt-8 relative flex flex-col justify-around bg-white rounded-lg items-center max-w-lg lg:max-w-2xl w-full h-[34rem]">
       <div className="absolute top-4 right-4">
         <Close close={close} />
       </div>
-      <div className="popup__header w-full h-12 border-b-2 text-center">
-        <h2 className="text-xl">Download Image</h2>
+      <div className="popup__header w-full h-12 mt-2 border-b-2 text-center">
+        <h2 className="text-lg">Download Image</h2>
       </div>
-      <div className="popup__image h-72 w-72">
+      <div className="popup__image h-60 w-60 lg:h-72 lg:w-72">
         <figure className="h-full">
           <img src={src} className="object-cover h-full w-full" />
         </figure>
       </div>
       <span>
-        <h3 className="text-lg">
+        <h3 className="text-base text-center lg:text-lg">
           Select the size you want to download the image in.
         </h3>
       </span>
-      <div className="popup__buttons w-3/4 flex justify-between">
+      <div className="popup__buttons w-full lg:w-3/4 lg:justify-between flex justify-around flex-wrap gap-2">
         <Size size={"Thumb"} handler={handleSize} />
         <Size size={"Small"} handler={handleSize} />
         <Size size={"Regular"} handler={handleSize} />

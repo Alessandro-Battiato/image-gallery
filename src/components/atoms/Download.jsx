@@ -4,7 +4,7 @@ const Download = ({ handler }) => {
   return (
     <button
       onClick={handler}
-      className="bg-blue-700 hover:bg-blue-800 text-gray-200 font-semibold p-3 rounded-lg flex"
+      className="bg-blue-700 hover:bg-blue-800 text-gray-200 font-semibold p-2 lg:p-3 rounded-lg flex"
     >
       <svg
         className="fill-current h-5 w-5 mr-2"
